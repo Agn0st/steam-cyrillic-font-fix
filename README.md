@@ -91,7 +91,7 @@ characters from it and the text renders correctly.
 
 This repository uses two licenses:
 
-- **The font** in `Font/` is licensed under the [Apache License 2.0](Font/LICENSE) by its original authors. It isn't my work.
-- **Everything else**, including this README, is under the [MIT License](LICENSE).
+- **The font** in `Font/` is licensed under the [Apache License 2.0](LICENSE-APACHE) by its original authors. It isn't my work.
+- **Everything else**, including this README, is under the [MIT License](LICENSE-MIT).
 
 Steam Cyrillic Font Fix is an unofficial project independent of Valve and Steam.

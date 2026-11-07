@@ -91,7 +91,7 @@ caracteres cirílicos y el texto se muestra correctamente.
 
 Este repositorio usa dos licencias:
 
-- **La fuente** de `Font/` se distribuye bajo la [licencia Apache 2.0](Font/LICENSE) de sus autores originales. No es obra mía.
-- **Todo lo demás**, incluido este README, se distribuye bajo la [licencia MIT](LICENSE).
+- **La fuente** de `Font/` se distribuye bajo la [licencia Apache 2.0](LICENSE-APACHE) de sus autores originales. No es obra mía.
+- **Todo lo demás**, incluido este README, se distribuye bajo la [licencia MIT](LICENSE-MIT).
 
 Steam Cyrillic Font Fix es un proyecto no oficial, independiente de Valve y de Steam.
