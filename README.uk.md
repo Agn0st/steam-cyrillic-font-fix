@@ -5,8 +5,7 @@
 </p>
 
 <p align="center">
-  <strong>Кирилиця в Steam знову виглядає так само, як решта сторінки.</strong><br>
-  Один файл шрифту для macOS виправляє кириличний текст, який у клієнті Steam і в Google Chrome показується шрифтом Times.
+  <strong>Виправляє кирилицю, яка в Steam на macOS показується шрифтом Times.</strong>
 </p>
 
 <p align="center">

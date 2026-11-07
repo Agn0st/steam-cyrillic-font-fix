@@ -5,8 +5,7 @@
 </p>
 
 <p align="center">
-  <strong>El texto cirílico en Steam vuelve a verse como el resto de la página.</strong><br>
-  Un solo archivo de fuente para macOS corrige el texto cirílico que aparece en Times en el cliente de Steam y en Google Chrome.
+  <strong>Corrige el texto cirílico que aparece en Times en Steam para macOS.</strong>
 </p>
 
 <p align="center">

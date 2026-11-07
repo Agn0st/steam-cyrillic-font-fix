@@ -5,8 +5,7 @@
 </p>
 
 <p align="center">
-  <strong>Cyrillic text on Steam looks like the rest of the page again.</strong><br>
-  One font file for macOS fixes Cyrillic text that shows up in Times in the Steam client and in Google Chrome.
+  <strong>Fix Cyrillic text showing up in Times on Steam for macOS.</strong>
 </p>
 
 <p align="center">
