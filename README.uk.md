@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Agn0st/steam-cyrilic-font-fix/raw/main/Font/MotivaSansfallback-Regular.ttf"><img alt="Завантажити шрифт" src="https://shieldcn.dev/badge/Download-Font-7C3AED.svg?logo=ri:RiDownload2Line&amp;size=default"></a>
+  <a href="https://github.com/Agn0st/steam-cyrillic-font-fix/releases/tag/v1.0"><img alt="Завантажити шрифт" src="https://shieldcn.dev/badge/Download-Font-7C3AED.svg?logo=ri:RiDownload2Line&amp;size=default"></a>
 </p>
 
 <p align="center">
@@ -49,8 +49,8 @@
 
 ## Встановлення
 
-1. Завантаж [`MotivaSansfallback-Regular.ttf`](https://github.com/Agn0st/steam-cyrilic-font-fix/raw/main/Font/MotivaSansfallback-Regular.ttf).
-2. Двічі клацни файл і натисни **Встановити шрифт** у Font Book.
+1. Завантаж `steam-cyrillic-font-fix-v1.0.zip` з [релізу v1.0](https://github.com/Agn0st/steam-cyrillic-font-fix/releases/tag/v1.0) і розпакуй його.
+2. Двічі клацни `MotivaSansfallback-Regular.ttf` і натисни **Встановити шрифт** у Font Book.
    Або скопіюй його в `~/Library/Fonts`.
 3. Повністю закрий **Steam** і **Chrome** через <kbd>⌘</kbd> <kbd>Q</kbd> і відкрий їх знову.
 

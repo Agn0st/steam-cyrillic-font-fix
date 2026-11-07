@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Agn0st/steam-cyrilic-font-fix/raw/main/Font/MotivaSansfallback-Regular.ttf"><img alt="Descargar la fuente" src="https://shieldcn.dev/badge/Download-Font-7C3AED.svg?logo=ri:RiDownload2Line&amp;size=default"></a>
+  <a href="https://github.com/Agn0st/steam-cyrillic-font-fix/releases/tag/v1.0"><img alt="Descargar la fuente" src="https://shieldcn.dev/badge/Download-Font-7C3AED.svg?logo=ri:RiDownload2Line&amp;size=default"></a>
 </p>
 
 <p align="center">
@@ -49,8 +49,8 @@ caracteres cirílicos y el texto se muestra correctamente.
 
 ## Instalación
 
-1. Descarga [`MotivaSansfallback-Regular.ttf`](https://github.com/Agn0st/steam-cyrilic-font-fix/raw/main/Font/MotivaSansfallback-Regular.ttf).
-2. Haz doble clic en el archivo y pulsa **Instalar tipo de letra** en Font Book.
+1. Descarga `steam-cyrillic-font-fix-v1.0.zip` de la [versión v1.0](https://github.com/Agn0st/steam-cyrillic-font-fix/releases/tag/v1.0) y descomprímelo.
+2. Haz doble clic en `MotivaSansfallback-Regular.ttf` y pulsa **Instalar tipo de letra** en Font Book.
    También puedes copiarlo a `~/Library/Fonts`.
 3. Cierra **Steam** y **Chrome** por completo con <kbd>⌘</kbd> <kbd>Q</kbd> y vuelve a abrirlos.
 
