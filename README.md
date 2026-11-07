@@ -49,7 +49,7 @@ characters from it and the text renders correctly.
 
 ## Installation
 
-1. Download `steam-cyrillic-font-fix-v1.0.zip` from the [v1.0 release](https://github.com/Agn0st/steam-cyrillic-font-fix/releases/tag/v1.0) and unzip it.
+1. Download [`MotivaSansfallback-Regular.ttf`](https://github.com/Agn0st/steam-cyrillic-font-fix/releases/tag/v1.0).
 2. Double-click `MotivaSansfallback-Regular.ttf` and click **Install Font** in Font Book.
    You can also copy it to `~/Library/Fonts`.
 3. Quit **Steam** and **Chrome** completely with <kbd>⌘</kbd> <kbd>Q</kbd>, then open them again.
