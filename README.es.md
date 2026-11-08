@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  <a href="#el-problema">El problema</a> · <a href="#solución">Solución</a> · <a href="#instalación">Instalación</a> · <a href="#desinstalación">Desinstalación</a>
+  <a href="#el-problema">El problema</a> · <a href="#solución">Solución</a> · <a href="#instalación">Instalación</a> · <a href="#desinstalación">Desinstalación</a> · <a href="#soluciones-alternativas">Soluciones alternativas</a>
 </p>
 
 ## El problema
@@ -36,6 +36,8 @@ para los caracteres cirílicos el navegador acaba usando la fuente con serifa de
 | Antes | Después |
 |-------|---------|
 | ![Texto cirílico en una página de Steam mostrado en Times](Images/before.png) | ![El mismo texto mostrado correctamente tras instalar la fuente](Images/after.png) |
+
+<br>
 
 ## Solución
 
@@ -73,6 +75,49 @@ caracteres cirílicos y el texto se muestra correctamente.
 2. Haz clic derecho y elige **Eliminar**.
 3. Reinicia Steam y Chrome.
 
+<br>
+
+## Soluciones alternativas
+
+Algunos elementos de Steam piden `"Motiva Sans", sans-serif` y se saltan **Motiva Sans fallback**,
+así que la fuente de arriba no llega a ellos. Un ejemplo es el encabezado fino **En línea** de la
+página de perfil. Estas opciones los corrigen sin instalar la fuente.
+
+### 1. Solo para Chrome
+
+Sin código. Abre `chrome://settings/fonts` y en **Sans-serif font** elige **Arial**.
+
+> [!WARNING]
+> Esto cambia `sans-serif` en todos los sitios web, no solo para el texto cirílico de Steam.
+
+### 2. Solo para el cliente de Steam
+
+El cliente de Steam está hecho con Chromium y guarda la configuración del navegador en un
+archivo que se puede editar. Pon Arial como su fuente sans-serif:
+
+1. Cierra **Steam** por completo con <kbd>⌘</kbd> <kbd>Q</kbd>. Steam reescribe el archivo al salir.
+2. Haz una copia de seguridad de `~/Library/Application Support/Steam/config/htmlcache/Default/Preferences`.
+3. Añade esto al nivel superior del JSON de ese archivo:
+
+   ```json
+   "webkit": {
+     "webprefs": {
+       "fonts": {
+         "sansserif": {
+           "Cyrl": "Arial",
+           "Zyyy": "Arial"
+         }
+       }
+     }
+   }
+   ```
+
+4. Vuelve a abrir Steam.
+
+Para deshacerlo, cierra Steam y restaura la copia de seguridad.
+
+<br>
+
 ## Probado
 
 | App | Versión | macOS |
@@ -85,6 +130,8 @@ caracteres cirílicos y el texto se muestra correctamente.
 > [!NOTE]
 > La corrección no depende de estas versiones. Es una fuente normal del sistema, así que
 > debería funcionar con otras versiones de Steam, Chrome y macOS.
+
+<br>
 
 ## Licencia
 

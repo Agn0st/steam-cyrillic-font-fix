@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  <a href="#the-problem">The problem</a> · <a href="#solution">Solution</a> · <a href="#installation">Installation</a> · <a href="#uninstall">Uninstall</a>
+  <a href="#the-problem">The problem</a> · <a href="#solution">Solution</a> · <a href="#installation">Installation</a> · <a href="#uninstall">Uninstall</a> · <a href="#alternative-solutions">Alternative solutions</a>
 </p>
 
 ## The problem
@@ -36,6 +36,8 @@ so for Cyrillic characters the browser ends up on the system default serif font.
 | Before | After |
 |--------|-------|
 | ![Cyrillic text on a Steam page rendered in Times](Images/before.png) | ![The same text rendered correctly after installing the font](Images/after.png) |
+
+<br>
 
 ## Solution
 
@@ -73,6 +75,49 @@ characters from it and the text renders correctly.
 2. Right-click it and choose **Remove**.
 3. Restart Steam and Chrome.
 
+<br>
+
+## Alternative solutions
+
+Some Steam elements ask for `"Motiva Sans", sans-serif` and skip **Motiva Sans fallback**,
+so the font above can't reach them. One example is the thin **Currently Online** header
+on a profile page. These options fix them without installing the font.
+
+### 1. Only for Chrome
+
+No code needed. Open `chrome://settings/fonts` and set **Sans-serif font** to **Arial**.
+
+> [!WARNING]
+> This changes `sans-serif` on every website, not only for Cyrillic text on Steam.
+
+### 2. Only for the Steam client
+
+The Steam client is built on Chromium and keeps its browser settings in a file you can
+edit. Set Arial as its sans-serif font:
+
+1. Quit **Steam** completely with <kbd>⌘</kbd> <kbd>Q</kbd>. Steam rewrites the file on exit.
+2. Back up `~/Library/Application Support/Steam/config/htmlcache/Default/Preferences`.
+3. Add this to the top level of the JSON in that file:
+
+   ```json
+   "webkit": {
+     "webprefs": {
+       "fonts": {
+         "sansserif": {
+           "Cyrl": "Arial",
+           "Zyyy": "Arial"
+         }
+       }
+     }
+   }
+   ```
+
+4. Open Steam again.
+
+To undo it, quit Steam and restore the backup.
+
+<br>
+
 ## Tested
 
 | App | Version | macOS |
@@ -85,6 +130,8 @@ characters from it and the text renders correctly.
 > [!NOTE]
 > The fix isn't tied to these versions. It is a regular system font, so it should work
 > with other versions of Steam, Chrome and macOS.
+
+<br>
 
 ## License
 
