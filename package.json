@@ -1,0 +1,42 @@
+{
+  "name": "steam-cyrillic-font-fix",
+  "version": "1.2.0",
+  "description": "Fix Cyrillic text showing up in Times on Steam for macOS.",
+  "keywords": [
+    "steam",
+    "cyrillic",
+    "font",
+    "macos",
+    "motiva-sans",
+    "chrome"
+  ],
+  "homepage": "https://github.com/Agn0st/steam-cyrillic-font-fix#readme",
+  "bugs": "https://github.com/Agn0st/steam-cyrillic-font-fix/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Agn0st/steam-cyrillic-font-fix.git"
+  },
+  "license": "(MIT AND Apache-2.0)",
+  "author": "Agn0st",
+  "bin": {
+    "steam-cyrillic-font-fix": "bin/steam-cyrillic-font-fix.js"
+  },
+  "files": [
+    "bin/",
+    "scripts/steam-cyrillic-font-fix.command",
+    "Font/",
+    "LICENSE-APACHE",
+    "LICENSE-MIT"
+  ],
+  "os": [
+    "darwin"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "prepack": "node scripts/npm-readme.js prepack",
+    "postpack": "node scripts/npm-readme.js postpack",
+    "release:zip": "bash scripts/build-release.sh"
+  }
+}

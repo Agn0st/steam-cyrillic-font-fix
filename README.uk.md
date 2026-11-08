@@ -14,10 +14,11 @@
   <img alt="macOS" src="https://shieldcn.dev/badge/macOS-000000.svg?logo=apple&amp;size=xs">
   <img alt="Fixes Cyrillic text" src="https://shieldcn.dev/badge/Fix-Cyrillic%20text-16A34A.svg?logo=ri:RiTranslate2&amp;size=xs">
   <a href="#ліцензія"><img alt="Шрифт під Apache 2.0, проєкт під MIT" src="https://shieldcn.dev/badge/License-Apache%202.0%20%2B%20MIT-6B7280.svg?logo=ri:RiScales3Line&amp;size=xs"></a>
+  <a href="https://www.npmjs.com/package/steam-cyrillic-font-fix"><img alt="Версія npm" src="https://shieldcn.dev/npm/steam-cyrillic-font-fix.svg?logo=npm&amp;color=CB3837&amp;size=xs"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Agn0st/steam-cyrillic-font-fix/releases/tag/v1.0"><img alt="Завантажити шрифт" src="https://shieldcn.dev/badge/Download-Font-7C3AED.svg?logo=ri:RiDownload2Line&amp;size=default"></a>
+  <a href="https://github.com/Agn0st/steam-cyrillic-font-fix/releases/latest"><img alt="Завантажити останній реліз" src="https://shieldcn.dev/badge/Download-Latest%20release-7C3AED.svg?logo=ri:RiDownload2Line&amp;size=default"></a>
 </p>
 
 <p align="center">
@@ -51,7 +52,37 @@
 
 ## Встановлення
 
-1. Завантаж [`MotivaSansfallback-Regular.ttf`](https://github.com/Agn0st/steam-cyrillic-font-fix/releases/tag/v1.0).
+### Автоматично
+
+Інсталятор встановлює шрифт і вмикає Arial для кирилиці в клієнті Steam
+(див. [Альтернативні рішення](#2-лише-для-клієнта-steam)). Якщо Steam відкритий, він
+закриє і знову відкриє його.
+
+**Без Terminal**
+
+1. Завантаж `steam-cyrillic-font-fix-v1.2.zip` з [Releases](https://github.com/Agn0st/steam-cyrillic-font-fix/releases/latest) і розпакуй.
+2. Двічі клацни **Install Steam Cyrillic Font Fix.command**.
+3. Повністю закрий **Chrome** через <kbd>⌘</kbd> <kbd>Q</kbd> і відкрий знову.
+
+> [!NOTE]
+> Якщо macOS пише, що файл не можна відкрити, клацни правою кнопкою, вибери **Відкрити** і ще раз натисни **Відкрити**.
+
+**З Node.js**
+
+```bash
+npx steam-cyrillic-font-fix
+```
+
+Додай `--font-only` або `--client-only`, щоб застосувати лише одну частину, або `--chrome`,
+щоб виправити ще й Chrome (див. [Лише для Chrome](#1-лише-для-chrome)).
+
+> [!NOTE]
+> Немає Node.js? Встанови його з [nodejs.org](https://nodejs.org) або через [Homebrew](https://brew.sh): `brew install node`.
+> `npx` іде разом із ним.
+
+### Вручну
+
+1. Завантаж [`MotivaSansfallback-Regular.ttf`](https://github.com/Agn0st/steam-cyrillic-font-fix/releases/latest).
 2. Двічі клацни `MotivaSansfallback-Regular.ttf` і натисни **Встановити шрифт** у Font Book.
    Або скопіюй його в `~/Library/Fonts`.
 3. Повністю закрий **Steam** і **Chrome** через <kbd>⌘</kbd> <kbd>Q</kbd> і відкрий їх знову.
@@ -71,6 +102,22 @@
 
 ## Видалення
 
+Видаляй фікс тим самим способом, яким встановлював.
+
+### 1. Встановлено через Node.js
+
+```bash
+npx steam-cyrillic-font-fix --undo
+```
+
+Якщо ти виправляв і Chrome, скасуй це окремо, наприклад `npx steam-cyrillic-font-fix --undo --chrome`.
+
+### 2. Встановлено через файл .command
+
+Перетягни **Install Steam Cyrillic Font Fix.command** у Terminal, допиши `--undo` і натисни <kbd>Return</kbd>.
+
+### 3. Встановлено вручну
+
 1. Відкрий **Font Book** і знайди **Motiva Sans fallback**.
 2. Натисни правою кнопкою і вибери **Вилучити**.
 3. Перезапусти Steam і Chrome.
@@ -87,13 +134,29 @@
 
 Код не потрібен. Відкрий `chrome://settings/fonts` і в полі **Sans-serif font** вибери **Arial**.
 
+Або нехай інсталятор зробить це для всіх профілів Chrome:
+
+```bash
+npx steam-cyrillic-font-fix --chrome
+```
+
+Для інших версій є `--chrome-beta` і `--chrome-canary`. Chrome закриється і відкриється знову.
+Відкриті вкладки повернуться, лише якщо в налаштуваннях Chrome увімкнено **Продовжити з того місця, де ви зупинилися**.
+
 > [!WARNING]
 > Це змінить `sans-serif` на всіх сайтах, а не лише для кирилиці в Steam.
 
 ### 2. Лише для клієнта Steam
 
 Клієнт Steam побудований на Chromium і зберігає налаштування браузера у файлі, який можна
-відредагувати. Признач Arial шрифтом sans-serif:
+відредагувати. [Інсталятор](#автоматично) сам призначить Arial шрифтом sans-serif. Щоб
+змінити лише клієнт Steam:
+
+```bash
+npx steam-cyrillic-font-fix --client-only
+```
+
+Вручну:
 
 1. Повністю закрий **Steam** через <kbd>⌘</kbd> <kbd>Q</kbd>. Під час виходу Steam перезаписує файл.
 2. Зроби резервну копію `~/Library/Application Support/Steam/config/htmlcache/Default/Preferences`.
